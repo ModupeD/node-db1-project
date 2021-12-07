@@ -1,27 +1,55 @@
-const router = require('express').Router()
+const router = require("express").Router();
 
-router.get('/', (req, res, next) => {
+router.get("/", (req, res, next) => {
   // DO YOUR MAGIC
-})
-
-router.get('/:id', (req, res, next) => {
-  // DO YOUR MAGIC
-})
-
-router.post('/', (req, res, next) => {
-  // DO YOUR MAGIC
-})
-
-router.put('/:id', (req, res, next) => {
-  // DO YOUR MAGIC
+  try {
+    res.json([{},{}])
+  } catch (err) {
+    next(err);
+  }
 });
 
-router.delete('/:id', (req, res, next) => {
+router.get("/:id", (req, res, next) => {
   // DO YOUR MAGIC
-})
+  try {
+  } catch (err) {
+    next(err);
+  }
+});
 
-router.use((err, req, res, next) => { // eslint-disable-line
+router.post("/", (req, res, next) => {
   // DO YOUR MAGIC
-})
+  try {
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.put("/:id", (req, res, next) => {
+  // DO YOUR MAGIC
+  try {
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.delete("/:id", (req, res, next) => {
+  // DO YOUR MAGIC
+  try {
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.use((err, req, res, next) => {
+  // eslint-disable-line
+  // DO YOUR MAGIC
+  try {
+  } catch (err) {
+    res.status(err.status || 500).json({
+      message: err.message,
+    });
+  }
+});
 
 module.exports = router;
